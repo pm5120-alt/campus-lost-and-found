@@ -2,15 +2,22 @@
 
 A Python/Tkinter desktop prototype for campus lost-and-found reports, possible matches, ownership claims, and administrator review. This is a student project, not an official SRMIST service.
 
-## Download the application
+## Get the project
 
-Download **[Campus_Lost_And_Found_GitHub_Ready.zip](Campus_Lost_And_Found_GitHub_Ready.zip)** from this repository and extract it. Open PowerShell inside the extracted `Campus_Lost_And_Found` folder.
+Clone the repository and open PowerShell in its folder:
+
+```powershell
+git clone https://github.com/pm5120-alt/campus-lost-and-found.git
+cd campus-lost-and-found
+```
+
+Alternatively, on GitHub click **Code → Download ZIP**, extract the downloaded repository, and open PowerShell in the extracted `campus-lost-and-found` folder.
 
 ## Run on Windows 10/11
 
 Install Python 3.11 or newer from [python.org](https://www.python.org/downloads/). During setup, enable **Add Python to PATH** and include **Tcl/Tk and IDLE**.
 
-Run these commands in PowerShell from the `Campus_Lost_And_Found` folder:
+Run these commands in PowerShell from the repository folder:
 
 ```powershell
 py -m venv .venv
@@ -40,7 +47,7 @@ After the administrator is created, the setup code is no longer needed. Close th
 Remove-Item Env:CAMPUS_ADMIN_SETUP_TOKEN
 ```
 
-For later launches, activate `.venv` and run `python app.py`. No setup token is required after the administrator is created.
+For later launches, activate `.venv` and run `python app.py`. No setup token is required after the administrator has been created.
 
 ## Student accounts
 
@@ -55,7 +62,7 @@ python -m compileall .
 python -m unittest discover -s tests -v
 ```
 
-The service test suite currently passes **8 tests**. The included `FINAL_REPORT.md` documents the verification scope and known limitations.
+The service test suite currently passes **8 tests**. `FINAL_REPORT.md` documents the verification scope and known limitations.
 
 ## Data and security notes
 
@@ -65,4 +72,4 @@ This is a single-computer academic prototype. It does not provide campus SSO, a 
 
 ## Credits
 
-The optional animated 3D welcome scene uses Maliang and maliang-three. See `THIRD_PARTY_NOTICES.md` in the project archive for license information.
+The optional animated 3D welcome scene uses Maliang and maliang-three. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for license information.
